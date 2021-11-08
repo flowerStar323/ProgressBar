@@ -1,0 +1,182 @@
+:root{
+  --prgress:50%;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.meter, .meter-red, .meter-blue, .meter-white, .meter-yellow {
+    box-sizing: content-box;
+    height: 28px; 
+    position: relative;
+    margin: 30px 0 20px 0;
+    background: rgb(235, 235, 235);
+    border-radius: 25px;
+    text-align: center;
+  }
+  .meter > p, .meter-red > p, .meter-blue > p, .meter-white > p, .meter-yellow > p{
+      width: 100%;
+      text-align: center;
+      color: rgb(86, 106, 57);
+      text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
+      
+      font-weight: bold;
+  }
+  .meter > span {
+    display: block;
+    height: 100%;
+    border-radius: 15px;
+    border: 2px solid rgb(149,183,97);
+    background-color: rgb(192, 229, 134);
+    background: linear-gradient(to bottom,  rgb(192, 229, 134) 80%,rgba(0,0,0,0.3));
+    position: relative;
+    box-shadow: 
+    0 -0.25rem 1.5rem rgb(192, 229, 134) inset,
+    0 0.12rem 0.1rem white inset;
+    overflow: hidden;
+    
+  }
+  
+  .meter-red > span {
+    display: block;
+    height: 100%;
+    border-radius: 15px;
+    border: 2px solid rgb(210, 124, 109);
+    background-color: rgb(255, 136, 122);
+    box-shadow: 
+    0 -0.25rem 1.5rem rgb(255, 136, 122) inset,
+    0 0.12rem 0.1rem white inset;
+    position: relative;
+    overflow: hidden;
+  }
+  .meter-white > span {
+    display: block;
+    height: 100%;
+    border-radius: 15px;
+    border: 2px solid rgb(197,197,197);
+    background-color: white;
+    position: relative;
+    
+    overflow: hidden;
+  }
+  .meter-blue > span {
+    display: block;
+    height: 100%;
+    border-radius: 15px;
+    border: 2px solid rgb(124,175,206);
+    background-color: rgb(143,203,240);
+    box-shadow: 
+    0 -0.25rem 1.5rem rgb(143,203,240) inset,
+    0 0.12rem 0.1rem white inset;
+    position: relative;
+    overflow: hidden;
+  }
+  .meter-yellow > span {
+    display: block;
+    height: 100%;
+    border-radius: 15px;
+    border: 2px solid rgb(208,174,80);
+    background-color: rgb(255, 211, 112);
+    box-shadow: 
+    0 -0.25rem 1.5rem rgb(255, 211, 112) inset,
+    0 0.12rem 0.1rem white inset;
+    position: relative;
+    overflow: hidden;
+  }
+  .meter > span:after,
+  .animate > span > span {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, 0.2) 25%,
+      transparent 5%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.2) 50%,
+      rgba(255, 255, 255, 0.2) 75%,
+      transparent 75%,
+      transparent
+    );
+    z-index: 1;
+    background-size: 8px 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    overflow: hidden;
+  }
+  .meter-red > span:after,
+  .animate > span > span {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, 0.2) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.2) 50%,
+      rgba(255, 255, 255, 0.2) 75%,
+      transparent 75%,
+      transparent
+    );
+    z-index: 1;
+    background-size: 8px 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    overflow: hidden;
+  }
+  .meter-red > span:after,
+  .meter-red > span:after,
+  .meter-yellow > span:after,
+  .meter-blue > span:after,
+  .animate > span > span {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, 0.2) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.2) 50%,
+      rgba(255, 255, 255, 0.2) 75%,
+      transparent 75%,
+      transparent
+    );
+    z-index: 1;
+    background-size: 8px 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    overflow: hidden;
+  }
+  
+  
+  
+  #page-wrap {
+    width: 490px;
+    margin: 80px auto;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  .progressState{
+    transition: all .25s;
+  }
